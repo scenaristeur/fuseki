@@ -13,7 +13,6 @@ var fusekiApp = path.join(__dirname, '/../../fuseki')
 
 if (!test('-f', fusekiDownload)) {
   mkdir('-p', 'downloads')
-//  exec('wget https://mirror.synyx.de/apache/jena/binaries/' + fusekiTar + ' -O "' + fusekiDownload + '"')
 var url = 'https://mirror.synyx.de/apache/jena/binaries/'+fusekiTar;
 
 //var url = "https://spoggy.herokuapp.com/";
@@ -26,24 +25,22 @@ wget({url: url, dest: fusekiDownload},    function (error, response, body) {
             console.log(response.headers); // response headers
             console.log('--- body:');
             console.log(body);             // content of package
-            fin()
+            untar_fuseki()
         }
     });
 }
 
 
-function fin(){
-  console.log("Fuseki Téléchargé")
+function untar_fuseki(){
+  console.log("Fuseki Downloaded")
 
 if (!test('-d', fusekiApp)) {
-  //exec('tar -xzf ' + fusekiDownload)
   tar.x(  // or tar.extract(
   {
     file: fusekiDownload
   }
 ).then(_=> {
   mv(fusekiUnzip, fusekiApp)
-   //.. tarball has been dumped in cwd .. })
-console.log("Installation de Fuseki dans "+fusekiApp+" terminéee")
+console.log("Fuseki installed in "+fusekiApp)
 });
 }}
