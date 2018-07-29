@@ -22,7 +22,9 @@
     "form-urlencoded": "^1.4.1",
     "isomorphic-fetch": "^2.2.1",
     "lodash.clone": "^4.5.0",
-    "shelljs": "^0.7.4"
+    "shelljs": "^0.7.4",
+    "node-wget": "^0.4.2",
+    "tar": "^4.4.4"
   },
   "devDependencies": {
     "standard": "^8.4.0"
