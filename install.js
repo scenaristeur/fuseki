@@ -25,10 +25,10 @@ if (!test('-f', fusekiDownload)) {
 
 
 
-  if (platform == 'linux'){
+ /* if (platform == 'linux'){
     exec('wget https://mirror.synyx.de/apache/jena/binaries/' + fusekiTar + ' -O "' + fusekiDownload + '"')
     untar_fuseki();
-  }else{
+  }else{*/
     wget({url: url, dest: fusekiDownload},    function (error, response, body) {
       if (error) {
         console.log('--- error:');
@@ -41,7 +41,7 @@ if (!test('-f', fusekiDownload)) {
         untar_fuseki()
       }
     });
-  }
+  //}
 }
 
 
