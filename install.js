@@ -13,6 +13,8 @@ var fusekiApp = path.join(__dirname, '/../../fuseki')
 
 var platform = process.platform;
 console.log(platform);
+var commande_wget = 'wget https://mirror.synyx.de/apache/jena/binaries/' + fusekiTar + ' -O "' + fusekiDownload + '"';
+console.log(commande_wget)
 
 
 if (!test('-f', fusekiDownload)) {
