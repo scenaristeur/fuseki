@@ -11,7 +11,8 @@ var fusekiDownload = path.join(__dirname, 'downloads', fusekiTar)
 var fusekiUnzip = path.join(__dirname, fusekiTar.split('.').slice(0, -2).join('.'))
 var fusekiApp = path.join(__dirname, '/../../fuseki')
 
-var platform = process.platform
+var platform = process.platform;
+console.log(platform);
 
 
 if (!test('-f', fusekiDownload)) {
