@@ -36,8 +36,8 @@ if (!test('-f', fusekiDownload)) {
       } else {
         console.log('--- headers:');
         console.log(response.headers); // response headers
-        console.log('--- body:');
-        console.log(body);             // content of package
+       // console.log('--- body:');
+       // console.log(body);             // content of package
         untar_fuseki()
       }
     });
